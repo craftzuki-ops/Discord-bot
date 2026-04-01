@@ -24,7 +24,7 @@ def keep_alive():
 # セキュリティ対策：Renderの「環境変数（安全な金庫）」から鍵を読み込みます
 DISCORD_TOKEN = os.getenv("MTQ4ODkxOTExMTU1ODc2MjU3Ng.GjINWY.X7PIlJNA3usXDzsbrf2eFLrRPx4XZqXRatwd5E")
 GEMINI_API_KEY = os.getenv("AIzaSyDnYJAXMz9UJk3ZaP64tFkSyL1x_8KShT4")
-TARGET_CHANNEL_ID = 123456789012345678  # ※ここは後で実際のチャンネルIDの数字に変更します
+TARGET_CHANNEL_ID = 1488933950377431312  # ※ここは後で実際のチャンネルIDの数字に変更します
 
 # Geminiの初期設定（ペルソナ設計）
 genai.configure(api_key=GEMINI_API_KEY)
@@ -48,7 +48,7 @@ async def on_message(message):
         return
 
     # ① 専用チャンネルの場合（メンション不要）
-    if message.channel.id == TARGET_CHANNEL_ID:1488933950377431312
+    if message.channel.id == TARGET_CHANNEL_ID:
         async with message.channel.typing():
             response = model.generate_content(message.content)
             await message.channel.send(response.text)
