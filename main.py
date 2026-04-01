@@ -22,8 +22,8 @@ def keep_alive():
 
 # ＝＝＝ ボットの基本設定 ＝＝＝
 # セキュリティ対策：Renderの「環境変数（安全な金庫）」から鍵を読み込みます
-DISCORD_TOKEN = os.getenv("MTQ4ODkxOTExMTU1ODc2MjU3Ng.G9wJR8.eXc7F_-aBAPOfd6uePezsGqArAOGD6xPlDR0MM")
-GEMINI_API_KEY = os.getenv("AIzaSyDnYJAXMz9UJk3ZaP64tFkSyL1x_8KShT4")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TARGET_CHANNEL_ID = 1488933950377431312  # ※ここは後で実際のチャンネルIDの数字に変更します
 
 # Geminiの初期設定（ペルソナ設計）
