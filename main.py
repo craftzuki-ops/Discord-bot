@@ -48,7 +48,7 @@ async def on_message(message):
         return
 
     # ① 専用チャンネルの場合（メンション不要）
-    if message.channel.id == TARGET_CHANNEL_ID:
+    if message.channel.id == TARGET_CHANNEL_ID:1488933950377431312
         async with message.channel.typing():
             response = model.generate_content(message.content)
             await message.channel.send(response.text)
